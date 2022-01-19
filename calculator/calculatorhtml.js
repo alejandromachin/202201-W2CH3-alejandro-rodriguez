@@ -10,8 +10,8 @@ const suma = document.getElementById("suma");
 const resta = document.getElementById("resta");
 const multiplicar = document.getElementById("multiplicar");
 const dividir = document.getElementById("dividir");
-let uno;
-let dos;
+const uno = document.getElementById("uno");
+const dos = document.getElementById("dos");
 const tres = document.getElementById("tres");
 const cuatro = document.getElementById("cuatro");
 const cinco = document.getElementById("cinco");
@@ -93,7 +93,7 @@ suma.addEventListener("click", () => {
     resultadoActual.textContent = "";
   } else {
     primerNumero = parseFloat(resultadoActual.textContent);
-    console.log(primerNumero);
+
     tipoOperacion = "suma";
     resultadoAnterior.textContent = `${
       resultadoAnterior.textContent + resultadoActual.textContent
@@ -174,7 +174,7 @@ function calcular() {
     case "suma":
       segundoNumero = parseFloat(resultadoActual.textContent);
       resultadoActual.textContent = sumar(primerNumero, segundoNumero);
-      console.log(primerNumero);
+
       primerNumero = sumar(primerNumero, segundoNumero);
       resultadoAnterior.textContent = "";
       tipoOperacion = undefined;

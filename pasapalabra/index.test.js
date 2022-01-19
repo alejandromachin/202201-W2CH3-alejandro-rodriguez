@@ -12,7 +12,7 @@ let ranking;
 let id;
 let questions = [];
 const numeroPackPreguntas = Math.floor(Math.random() * 3 + 1);
-let botonPasapalabra;
+const botonPasapalabra = document.querySelector(".boton__pasapalabra");
 
 // DOM
 
@@ -51,6 +51,17 @@ function iniciar() {
 
   nombrePlayer = document.getElementById("nombre").value;
 }
+
+// describe("Given a iniciar() function", () => {
+//   describe("When the input 'nombre' has no value", () => {
+//     test("Then it should exit with the message 'DISCULPA, TIENES QUE INTRODUCIR TU NOMBRE'", () => {
+//       const nombre = "";
+
+//     })
+
+//   })
+
+// });
 
 function obtenerRespuesta() {
   // CAPTURA RESPUESTA
