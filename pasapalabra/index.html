@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASAPALABRA</title>
+    <link hel="preload" href="/precurso/pasapalabrahtml/index.css" as="style">
+    <link href="/pasapalabrahtml2/index.css" rel="stylesheet">
+    <script src="/pasapalabrahtml2/index.js" type="text/javascript" defer></script>
+
+</head>
+<body>
+    <div class="tablero">
+        <div class="rosco">
+			<div class="puntuacion">
+				<div class="puntos">0</div>
+				<div class="timer"id="tiempo">150</div>
+			</div>
+
+			<div class="menu">
+				
+				<div class="toggle">PASAPALABRA</div>
+				<div class="toggle__pasapalabra">PASAPALABRA</div>
+
+				 <li style="--i:0;"class="letra" id="a">
+					<p>A</p>
+				 </li>
+				 <li style="--i:1;"class="letra" id="b">
+					<p>B</p>
+				 </li>
+				 <li style="--i:2;"class="letra" id="c">
+					<p>C</p>
+				 </li>
+				 <li style="--i:3;"class="letra" id="d">
+					<p>D</p>
+				 </li>
+				 <li style="--i:4;"class="letra" id="e">
+					<p>E</p>
+				 </li>
+				 <li style="--i:5;" class="letra" id="f">
+					<p>F</p>
+				 </li>
+				 <li style="--i:6;" class="letra" id="g">
+					<p>G</p>
+				 </li>
+				 <li style="--i:7;"class="letra" id="h">
+					<p>H</p>
+				 </li>
+				 <li style="--i:8;"class="letra" id="i">
+					<p>I</p>
+				</li>
+				<li style="--i:9;"class="letra" id="j">
+					<p>J</p>
+				</li>
+				<li style="--i:10;"class="letra" id="k">
+					<p>K</p>
+				</li>
+				<li style="--i:11;"class="letra" id="l">
+					<p>L</p>
+				</li>
+				<li style="--i:12;"class="letra" id="m">
+					<p>M</p>
+				</li>
+				<li style="--i:13;"class="letra" id="n">
+					<p>N</p>
+				</li>
+				<li style="--i:14;"class="letra" id="ñ">
+					<p>Ñ</p>
+				</li>
+				<li style="--i:15;"class="letra" id="o">
+					<p>O</p>
+				</li>
+				<li style="--i:16;"class="letra" id="p">
+					<p>P</p>
+				</li>
+				<li style="--i:17;"class="letra" id="q">
+					<p>Q</p>
+				</li>
+				<li style="--i:18;"class="letra" id="r">
+					<p>R</p>
+				</li>
+				<li style="--i:19;"class="letra" id="s">
+					<p>S</p>
+				</li>
+				<li style="--i:20;"class="letra" id="t">
+					<p>T</p>
+				</li>
+				<li style="--i:21;"class="letra" id="u">
+					<p>U</p>
+				</li>
+				<li style="--i:22;"class="letra" id="v">
+					<p>V</p>
+				</li>
+				<li style="--i:23;"class="letra" id="w">
+					<p>W</p>
+				</li>
+				<li style="--i:24;"class="letra" id="x">
+					<p>X</p>
+				</li>
+				<li style="--i:25;"class="letra" id="y">
+					<p>Y</p>
+				</li>
+				<li style="--i:26;"class="letra" id="z">
+					<p>Z</p>
+				</li>
+			
+
+				</div>
+
+
+			 </div>
+
+		
+            
+
+        <div class="preguntas">
+			<div class="intro">
+			<h1><p>BIENVENIDOS AL JUEGO DE PASAPALABRA, INTRODUCE TU NOMBRE 
+			<input type="text" id="nombre" class="nombre" name="nombre" required autocomplete="off" placeholder="AQUÍ">
+				
+				<br>Y HAZ CLICK EN EL BOTÓN DE PASAPALABRA PARA JUGAR.
+			</p></h1>
+			</div>
+			<div class="instrucciones">
+				<h2><p>INSTRUCCIONES</p></h2>
+				<br>
+				<p>Siguiendo las normas del juego de Pasapalabra, se realizará una pregunta por cada letra del abecedario. 
+				<br>
+				<br>
+				Podrás responder la pregunta introduciendo la respuesta en el espacio correspondiente y hacer click en el botón "enter".
+				<br>
+				<br>
+				El juego reonoce los acentos, por lo que deberás escribir la palabra correctamente.
+				<br> 
+				<br>
+				En el caso de no saber la respuesta, podrás hacer click en el botón de pasapalabra o escribir "pasapalabra" en la respuesta.
+				<br>
+
+				</p>
+				<a href="#" class="boton boton__jugar">JUGAR!</a>
+
+			</div>
+		<div class="jugando">
+			<div>	
+				<div id="preguntaActual"></div>
+	
+			</div>
+			<input type="text" id="respuesta" name="respuesta" required autocomplete="off" placeholder="RESPUESTA">
+			<div class="botonesContainer">
+				<a href="#" class="boton boton__enter">ENTER</a>
+				<a href="#" class="boton boton__pasapalabra">PASAPALABRA</a>
+			</div>
+		</div>
+		
+		<div class="recuento">
+			<div class="contenedorResultado">
+				<h2 class="h2final">TIEMPO!</h2>
+<br>
+				<div class="resultado"></div>
+				<br>
+			<a href="#" class="irAlRanking">VER RANKING!</a>
+				
+			</div> </div>
+			<div class="ranking"><h2>RANKING</h2>
+				
+				<table id="tabla__ranking"> 
+				  <tr>
+					<td><b>Posición</b></td>
+					<td><b>Nombre</b></td>
+					<td><b>Puntos</b></td>
+				  </tr>
+				  <tr>
+					<td>1</td>
+					<td id="rankingNombre1">-</td>
+					<td id="rankingPuntos1">-</td>
+				  </tr>
+				  <tr>
+					<td>2</td>
+					<td id="rankingNombre2">-</td>
+					<td id="rankingPuntos2">-</td>
+				  </tr>
+				  <tr>
+					<td>3</td>
+					<td id="rankingNombre3">-</td>
+					<td id="rankingPuntos3">-</td>
+				  </tr>
+				  <tr>
+					<td>4</td>
+					<td id="rankingNombre4">-</td>
+					<td id="rankingPuntos4">-</td>
+				  </tr>
+				  <tr>
+					<td>5</td>
+					<td id="rankingNombre5">-</td>
+					<td id="rankingPuntos5">-</td>
+				  </tr>
+				  <tr>
+					<td>6</td>
+					<td id="rankingNombre6">-</td>
+					<td id="rankingPuntos6">-</td>
+				  </tr>
+				  
+				</table> 
+				 <!-- <div>
+				  <button class="play-again-button">Play Again</button>
+				</div>  -->
+			  
+			 </div> 
+		
+		</div>
+    </div>
+
+
+
+</body>
+</html> 

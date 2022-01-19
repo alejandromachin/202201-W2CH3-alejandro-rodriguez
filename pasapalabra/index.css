@@ -1,0 +1,442 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: cadetblue;
+font-family: helvetica;
+
+}
+
+h1 {
+
+    font-size: 3rem;
+
+
+}
+
+.nombre {
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+    
+}
+
+.tablero {
+    display: flex;
+    width: 100rem;
+    height:50rem;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+
+.rosco {
+position: relative;
+width: 50rem;
+height: 50rem;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+.preguntas {
+    position: relative;
+    width: 50rem;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    }
+
+.menu{
+
+position: relative;
+width: 200px;
+height: 200px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.menu li{
+
+
+    position: absolute;
+ 
+    left: -100px;
+    list-style: none;
+    transform-origin: 200px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translate(180px)
+
+}
+
+
+.menu.active li {
+
+    transform: rotate(calc(360deg/ 27 * var(--i) ));
+
+}
+
+
+.puntuacion {
+
+    display: none;
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    gap: 1rem;
+    font-size: 2rem;
+
+
+
+}
+
+.puntos {
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 5rem;
+    height: 4rem;
+    border-radius: 1rem;
+    background-image: radial-gradient(circle, #167fdb, #033561);
+    border: 0.2rem solid #ffffff;
+    color: #ffffff;
+
+
+}
+
+.timer {
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 5rem;
+    height: 4rem;
+    border-radius: 1rem;
+    background-image: radial-gradient(circle, #167fdb, #033561);
+    border: 0.2rem solid #ffffff;
+    color: #ffffff;
+
+}
+
+
+
+.letra p {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-image: radial-gradient(circle, #167fdb, #033561);
+    border-radius: 50%;
+    transform: rotate(calc(360deg/ -27 * var(--i) ));
+    box-shadow: 0 3px 4px rbga(0,0,0,0.50);
+    color:#ffffff;
+    border: 0.2rem solid #ffffff;
+}
+
+
+
+.letra--acertada p{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-image: radial-gradient(circle, #289644, #0f3820);
+    border-radius: 50%;
+    transform: rotate(calc(360deg/ -27 * var(--i) ));
+    box-shadow: 0 3px 4px rbga(0,0,0,0.50);
+    color:#ffffff;
+    border: 0.2rem solid #ffffff;
+
+
+
+
+
+}
+
+
+.letra--fallada p {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-image: radial-gradient(circle, #e45555, #8a0000);
+    border-radius: 50%;
+    transform: rotate(calc(360deg/ -27 * var(--i) ));
+    box-shadow: 0 3px 4px rbga(0,0,0,0.50);
+    color:#ffffff;
+    border: 0.2rem solid #ffffff;
+
+
+
+
+
+}
+
+
+
+
+.toggle 
+
+{
+
+    position: absolute;
+    width: 18rem;
+    height: 5rem;
+    background-image: radial-gradient(circle, #167fdb, #033561);
+    border: 0.2rem solid #ffffff;
+    color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 3px 4px rbga(0,0,0,0.15);
+    font-size: 2em;
+    transition: 1.25s;
+  
+}
+
+.toggle__pasapalabra 
+
+{
+
+    position: absolute;
+    width: 18rem;
+    height: 5rem;
+    background-image: radial-gradient(circle, #167fdb, #033561);
+    border: 0.2rem solid #ffffff;
+    color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 1rem;
+    box-shadow: 0 3px 4px rbga(0,0,0,0.15);
+    font-size: 2em;
+    transition: 1.25s;
+    display: none;
+  
+}
+
+menu.active .toggle {
+transform: rotate(360deg);
+
+
+}
+
+
+
+/* PARTE DE LAS PREGUNTAS */
+
+.preguntas {
+    height: 30rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    border-color: blue;
+    border: 5rem;
+    box-shadow: blue;
+    /* border: 2rem; */
+    /* border-color: black; */
+}
+
+.instrucciones {
+  
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    height: 25rem;
+    display: none;
+    
+}
+
+.instrucciones p {
+    text-align: justify;
+    font-size: 1.2rem;
+    width: 40rem;
+    
+}
+.intro {
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+}
+
+.jugando {
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    height: 25rem;
+    display: none;
+    gap: 1rem;
+
+}
+
+.botonesContainer {
+
+    display: block;
+
+}
+.boton {
+
+    justify-content: center;
+    align-items: center;
+    text-decoration:  none;
+    width: 5rem;
+    padding: 0.5rem;
+    /* height: 100%; */
+    border-radius: 1rem;
+
+    border: 0.2rem solid #ffffff;
+    color: #ffffff;
+
+
+
+}
+.boton__enter {
+
+    background-color: rgb(5, 90, 43);
+
+}
+
+.boton__pasapalabra {
+
+    background-color: rgb(128, 183, 255);
+
+}
+
+.boton__jugar {
+
+    width:10rem;
+    height: 5rem;
+    font-size: 2rems;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(5, 100, 13);
+}
+
+
+#preguntaActual {
+    display: grid;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    height: 15rem;
+    
+
+
+}
+
+#respuesta {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+
+
+
+}
+
+.recuento {
+    justify-content: center;
+    align-items: center;
+    width: 45rem;
+    height: 25rem;
+    display: none;
+    gap: 1rem;
+    font-size: 1rem;
+    
+
+
+}
+
+.contenedorResultado {
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 25rem;
+    display: block;
+  
+    font-size: 2rem;
+
+
+}
+
+.irAlRanking {
+    position: absolute;
+    width: 15rem;
+    height: 5rem;
+    background-image: radial-gradient(circle, #167fdb, #033561);
+    border: 0.2rem solid #ff0000;
+    color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 1rem;
+    box-shadow: 0 3px 4px rbga(0,0,0,0.15);
+    font-size: 1.7rem;
+
+
+}
+
+.ranking {
+    top: 10rem;
+    justify-content: center;
+    align-items: center;
+    width: 45rem;
+    height: 28rem;
+    display: none;
+
+    font-size: 1.7rem;
+    
+}
+
+.ranking table {
+    padding: 0rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-spacing: 15px;
+
+}

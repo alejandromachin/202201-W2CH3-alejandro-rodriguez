@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <link hel="preload" href="/precurso/calculatorhtml/calculatorhtml.css" as="style">
+    <link href="/precurso/calculatorhtml/calculatorhtml.css" rel="stylesheet">
+    <script src="/precurso/calculatorhtml/calculatorhtml.js" type="text/javascript" defer></script>
+
+</head>
+<body onload="calculadora()">
+
+<table class="calculadora">
+    <tr>
+        <td colspan="4" class="resultado">
+            <div id="resultadoAnterior"></div>
+            <div id="resultadoActual"></div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"> <button class="button button--ac" id="borrar">AC</button></td>
+        <td> <button class="button" id="atras"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+          </svg></button></td>
+        <td> <button class="button__operacion"id="dividir">/</button></td>
+
+
+    </tr>
+
+
+    <tr>
+        
+        <td> <button class="button "id="siete">7</button></td>
+        <td> <button class="button "id="ocho">8</button></td>
+        <td> <button class="button "id="nueve">9</button></td>
+        <td> <button class="button__operacion"id="multiplicar">*</button></td>
+        
+    </tr>
+    <tr>
+        
+        <td> <button class="button "id="cuatro">4</button></td>
+        <td> <button class="button "id="cinco">5</button></td>
+        <td> <button class="button "id="seis">6</button></td>
+        <td> <button class="button__operacion" id="resta">-</button></td>
+        
+    </tr>
+    <tr>
+        
+        <td> <button class="button "id="uno">1</button></td>
+        <td> <button class="button "id="dos">2</button></td>
+        <td> <button class="button "id="tres">3</button></td>
+        <td> <button class="button__operacion"id="suma">+</button></td>
+        
+    </tr>
+
+    <tr>
+        
+        <td colspan="2"> <button class="button button--0"id="cero">0</button></td>
+        <td> <button class="button"id="coma">.</button></td>
+        <td> <button class="button__operacion"id="igual">=</button></td>
+        
+    </tr>
+
+
+
+</table>
+
+
+    
+</body>
+</html>
