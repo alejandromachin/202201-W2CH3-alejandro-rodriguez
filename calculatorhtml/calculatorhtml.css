@@ -1,0 +1,97 @@
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+
+    box-sizing: inherit;
+}
+
+
+.calculadora{
+
+    display: grid;
+    margin: 0 auto;
+    background-color: rgb(188, 194, 204);
+    width: 23rem;
+    height: 36rem;
+    padding: 1rem;
+    border: 4rem;
+    border-color: darkblue;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-collapse:collapse;
+    box-shadow: 1rem 1rem 1rem  #00000050;
+    border-radius: 0.5rem;
+    font-family: helvetica;
+}
+
+td {
+
+    padding: 0;
+
+
+}
+
+
+.button {
+    font-family: helvetica;
+    border-radius: 0rem;
+    display: block;
+    width: 100%;
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    border-collapse: collapse;
+    border-color: rgb(255, 255, 255);
+
+}
+
+.button--ac{
+    width: 100%;
+   
+}
+
+.button--0{
+    width: 100%;
+}
+
+.resultado {
+    font-size: 3rem;
+    color:rgb(255, 255, 255);
+    width: 100%;
+    width: 20rem;
+    height: 8rem;
+    background-color: rgb(58, 53, 78);
+    border-radius: 0.5rem;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: right;
+    padding: 0.7rem;
+
+}
+#resultadoAnterior{
+padding: 0;
+display: grid;
+align-items: flex-end;
+font-size: 1.5rem;
+
+
+}
+
+.button__operacion {
+    font-family: helvetica;
+    border-radius: 0rem;
+    display: block;
+    width: 100%;
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    border-collapse: collapse;
+    background-color: rgb(255, 150, 51);
+    border-color: rgb(255, 150, 51);
+
+
+}
