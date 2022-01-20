@@ -122,18 +122,15 @@ resta.addEventListener("click", () => {
 multiplicar.addEventListener("click", () => {
   if (tipoOperacion === "multiplicacion") {
     segundoNumero = parseFloat(resultadoActual.textContent);
-    resultadoAnterior.textContent = `${multiplicacion(
-      primerNumero,
-      segundoNumero
-    )} ``*`;
+    resultadoAnterior.textContent =
+      `${multiplicacion(primerNumero, segundoNumero)} ` + `*`;
     primerNumero = multiplicacion(primerNumero, segundoNumero);
     resultadoActual.textContent = "";
   } else {
     primerNumero = parseFloat(resultadoActual.textContent);
     tipoOperacion = "multiplicacion";
-    resultadoAnterior.textContent = `${
-      resultadoAnterior.textContent + resultadoActual.textContent
-    } ``*`;
+    resultadoAnterior.textContent =
+      `${resultadoAnterior.textContent + resultadoActual.textContent} ` + `*`;
     resultadoActual.textContent = "";
   }
 });
@@ -141,18 +138,15 @@ multiplicar.addEventListener("click", () => {
 dividir.addEventListener("click", () => {
   if (tipoOperacion === "division") {
     segundoNumero = parseFloat(resultadoActual.textContent);
-    resultadoAnterior.textContent = `${division(
-      primerNumero,
-      segundoNumero
-    )} ``/`;
+    resultadoAnterior.textContent =
+      `${division(primerNumero, segundoNumero)} ` + `/`;
     primerNumero = division(primerNumero, segundoNumero);
     resultadoActual.textContent = "";
   } else {
     primerNumero = parseFloat(resultadoActual.textContent);
     tipoOperacion = "division";
-    resultadoAnterior.textContent = `${
-      resultadoAnterior.textContent + resultadoActual.textContent
-    } ``/`;
+    resultadoAnterior.textContent =
+      `${resultadoAnterior.textContent + resultadoActual.textContent} ` + `/`;
     resultadoActual.textContent = "";
   }
 });
